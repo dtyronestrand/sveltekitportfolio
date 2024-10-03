@@ -50,7 +50,7 @@
 	
 	<div class="col-start-1 md:row-start-1">
 
-	<h1 class="mb-2 md:mb-8 text-[clamp(3rem,20vmin,13rem)] font-extrabold leading-none tracking-tighter text-nowrap">
+	<h1 aria-label={slice.primary.first_name + " " + slice.primary.last_name} class="mb-2 md:mb-8 text-[clamp(3rem,20vmin,13rem)] font-extrabold leading-none tracking-tighter text-nowrap">
 		{#if first_name_letters.length && last_name_letters.length}
 		
 		<span class="block text-slate-300">
