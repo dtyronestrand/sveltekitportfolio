@@ -4,6 +4,9 @@
 	import { repositoryName } from '$lib/prismicio';
 	import '../app.css';
 	import '@fontsource-variable/urbanist'
+	import Footer from '$lib/components/Footer.svelte';
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -22,4 +25,6 @@
 <main>
 	<slot />
 </main>
+<div class="background-gradient absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
+<Footer settings={data.settings}/>
 <PrismicPreview {repositoryName} />
