@@ -5,6 +5,7 @@
 	import '../app.css';
 	import '@fontsource-variable/urbanist'
 	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	export let data;
 </script>
@@ -22,6 +23,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 	{/if}
 </svelte:head>
+<Header settings={data.settings}/>
 <main>
 	<slot />
 </main>
