@@ -17,7 +17,7 @@
 				start: 'top bottom',
 				end: 'bottom top',
 				scrub: 4,
-				markers: true}
+				
 		})
 
 
