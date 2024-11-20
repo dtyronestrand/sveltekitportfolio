@@ -2,6 +2,7 @@
 // @ts-check
 import { join } from 'path';
 import { myCustomTheme } from './custom-theme';
+import { myLanternTheme } from './lanterns';
 // 1. Import the Skeleton plugin
 import { skeleton } from '@skeletonlabs/tw-plugin';
 
@@ -23,7 +24,7 @@ export default {
 	plugins: [
         require(`@tailwindcss/typography`),
 		// 4. Append the Skeleton plugin (after other plugins)
-		skeleton({themes:{custom: [myCustomTheme]}})
+		skeleton({themes:{custom: [myCustomTheme, myLanternTheme]}})
 	]
 }
 						

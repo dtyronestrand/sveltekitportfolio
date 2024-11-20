@@ -9,8 +9,8 @@ let className: string = "";
 export {className as class};
 </script>
 
-<PrismicLink field={linkfield} class={`group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-tertiary-900 bg-primary-50 px-4 py-2 font-bold transition-transform ease-out hover:scale-105 ${className} `}>
-    <span class={`absolute inset-0 z-0 h-full rounded bg-secondary-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0 $translate-y-0`}></span>
+<PrismicLink field={linkfield} class={`group relative flex w-fit items-center justify-center overflow-hidden rounded-md border-2 border-secondary-700 bg-tertiary-50 px-4 py-2 font-bold transition-transform ease-out hover:scale-105 ${className} `}>
+    <span class={`absolute inset-0 z-0 h-full rounded bg-primary-500 transition-transform duration-300 ease-in-out group-hover:translate-y-0 $translate-y-0`}></span>
     <span class="relative flex items-center gap-2 justify-center">{label}</span>
     {#if showicon}
     <IconArrow/>

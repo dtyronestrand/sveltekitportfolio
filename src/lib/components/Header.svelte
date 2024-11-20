@@ -14,12 +14,12 @@
 
 <header class="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4 relative">
     <nav>
-        <div class="flex flex-col justify-between rounded-b-lg bg-tertiary-50 px-4 py-2 m-4 md:flex-row md:items-center md:rounded-xl">
+        <div class="flex flex-col justify-between rounded-b-lg bg-primary-50 px-4 py-2 m-4 md:flex-row md:items-center md:rounded-xl">
             <div class="flex justify-between items-center">
-                <a href="/" aria-label="homepage" class="text-xl font-extrabold tracking-tighter text-secondary-600">{settings.data.name}</a>
+                <a href="/" aria-label="homepage" class="text-xl font-extrabold tracking-tighter text-primary-600">{settings.data.name}</a>
                 <button aria-expanded={open} aria-label="open menu"
                 on:click={() => (open = true)}
-                class="block p-2 text-2xl text-primary-500 md:hidden"><IconMenu/></button>
+                class="block p-2 text-2xl text-secondary-500 md:hidden"><IconMenu/></button>
             </div>
             <ul class={`fixed inset-0 z-50 flex flex-col items-end gap-4 bg-tertiary-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden ${open ? 'translate-x-0' : 'translate-x-[100%]'}`}>
             <li>

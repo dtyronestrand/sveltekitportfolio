@@ -65,7 +65,7 @@
 			</span>
 		{/if}
 			</h1>
-	<span class="tag-line opacity-0 block bg-gradient-to-tr from-tertiary-100 via-tertiary-300 to-tertiary-500 text-transparent bg-clip-text text-4xl md:text-7xl">
+	<span class="tag-line opacity-0 block bg-gradient-to-tr from-secondary-100 via-secondary-300 to-secondary-500 text-transparent bg-clip-text text-4xl md:text-7xl">
 	{slice.primary.tag_line}
 	</span>
 	</div>
