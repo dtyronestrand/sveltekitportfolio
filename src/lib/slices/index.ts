@@ -3,11 +3,11 @@
 import Bio from './Bio/index.svelte';
 import Hero from './Hero/index.svelte';
 import RichText from './RichText/index.svelte';
-
+import TechList from './TechList/index.svelte';
 
 export const components = {
 	bio: Bio,
 	hero: Hero,
 	rich_text: RichText,
-
+	tech_list: TechList
 };
