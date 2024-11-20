@@ -53,19 +53,19 @@
 	<h1 aria-label={slice.primary.first_name + " " + slice.primary.last_name} class="mb-2 md:mb-8 text-[clamp(3rem,20vmin,13rem)] font-extrabold leading-none tracking-tighter text-nowrap">
 		{#if first_name_letters.length && last_name_letters.length}
 		
-		<span class="block text-slate-300">
+		<span class="block text-primary-200">
 			{#each first_name_letters as letter, i}
 			<span class="name-animation inline=-block opacity-0">{letter}</span>
 				{/each}
 			</span>
-		<span class="block text-slate-500 -mt-[.2em]">
+		<span class="block text-primary-400 -mt-[.2em]">
 			{#each last_name_letters as letter, i}
 			<span class="name-animation inline-block opacity-0">{letter}</span>
 				{/each}
 			</span>
 		{/if}
 			</h1>
-	<span class="tag-line opacity-0 block bg-gradient-to-tr from-[#284777] via-[#aac7ff] to-[#284777] text-transparent bg-clip-text text-4xl md:text-7xl">
+	<span class="tag-line opacity-0 block bg-gradient-to-tr from-tertiary-100 via-tertiary-300 to-tertiary-500 text-transparent bg-clip-text text-4xl md:text-7xl">
 	{slice.primary.tag_line}
 	</span>
 	</div>

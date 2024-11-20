@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeroSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice = BioSlice | HeroSlice | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -213,6 +213,88 @@ export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocu
 export type AllDocumentTypes = PageDocument | SettingsDocument;
 
 /**
+ * Primary content in *Bio → Default → Primary*
+ */
+export interface BioSliceDefaultPrimary {
+	/**
+	 * Headiing field in *Bio → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio.default.primary.headiing
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	headiing: prismic.KeyTextField;
+
+	/**
+	 * Description field in *Bio → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Button Label field in *Bio → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio.default.primary.button_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_label: prismic.KeyTextField;
+
+	/**
+	 * Button Link field in *Bio → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio.default.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+
+	/**
+	 * Avatar field in *Bio → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: bio.default.primary.avatar
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	avatar: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Bio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<BioSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Bio*
+ */
+type BioSliceVariation = BioSliceDefault;
+
+/**
+ * Bio Shared Slice
+ *
+ * - **API ID**: `bio`
+ * - **Description**: Bio
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioSlice = prismic.SharedSlice<'bio', BioSliceVariation>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -344,6 +426,10 @@ declare module '@prismicio/client' {
 			SettingsDocumentData,
 			SettingsDocumentDataNavItem,
 			AllDocumentTypes,
+			BioSlice,
+			BioSliceDefaultPrimary,
+			BioSliceVariation,
+			BioSliceDefault,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceVariation,
