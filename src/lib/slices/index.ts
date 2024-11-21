@@ -3,6 +3,7 @@
 import Bio from './Bio/index.svelte';
 import Experience from './Experience/index.svelte';
 import Hero from './Hero/index.svelte';
+import ImageBlock from './ImageBlock/index.svelte';
 import RichText from './RichText/index.svelte';
 import TechList from './TechList/index.svelte';
 
@@ -10,6 +11,7 @@ export const components = {
 	bio: Bio,
 	experience: Experience,
 	hero: Hero,
+	image_block: ImageBlock,
 	rich_text: RichText,
 	tech_list: TechList
 };
