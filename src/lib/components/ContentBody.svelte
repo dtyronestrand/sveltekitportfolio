@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { SliceZone } from '@prismicio/svelte';
     import type {Content} from '@prismicio/client';
-    import Bounded from '$lib/components/Bounded.svelte';
-    import Heading from '$lib/components/Heading.svelte';
+    import Bounded from './Bounded.svelte';
+    import Heading from './Heading.svelte';
 	import { components } from '$lib/slices';
     import {formatDate} from '$lib/formatDate'
 	export let page: Content.BlogpostDocument | Content.ProjectDocument;

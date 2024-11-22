@@ -17,5 +17,5 @@
 		<PrismicRichText field={slice.primary.description} />
 	</div>
 	{/if}
-	<ContentList fallBackItemImage={slice.primary.fallback_item_image} items={items} viewMoreText={slice.primary.view_more_text}/>
+	<ContentList {items}  fallbackItemImage={slice.primary.fallback_item_image} viewMoreText={slice.primary.view_more_text}/>
 </Bounded>
